@@ -5,11 +5,11 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import Counters from "./components/counters";
-import Landing from "./components/landing";
+import Landing from "./components/Home";
 
-ReactDOM.render(<Landing />, document.getElementById("root"));
+// ReactDOM.render(<Home />, document.getElementById("root"));
 // ReactDOM.render(<Counters />, document.getElementById("root"));
-// ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
