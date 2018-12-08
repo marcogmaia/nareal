@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import 
 
 class Home extends Component {
   // imgfolder = "../epubs/covers/";
@@ -35,6 +36,10 @@ class Home extends Component {
             ))}
           </div>
         </div>
+        <div className="container meuteste">
+          <h1 className="meuteste">texto teste</h1>
+        </div>
+        ;
       </div>
     );
   }
