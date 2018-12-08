@@ -7,9 +7,9 @@ import React, { Component } from "react";
 // const litem = mlist.map(item => <li>{item}</li>);
 
 class Landing extends Component {
-  imgfolder = "../epubs/covers/";
+  // imgfolder = "../epubs/covers/";
   state = {
-    image: ["gatsby.jpg", "got.jpg"]
+    image: ["gatsby", "got", "harryPotter", "stephenKing"]
   };
 
   render() {
@@ -19,7 +19,11 @@ class Landing extends Component {
           <div className="row">
             {this.state.image.map(img => (
               <div className="card">
-                <img src={require(`../epubs/covers/${img}`)} alt="" />
+                <img
+                  height="400px"
+                  src={require(`../epubs/covers/${img}.jpg`)}
+                  alt=""
+                />
               </div>
             ))}
           </div>
