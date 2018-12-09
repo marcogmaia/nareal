@@ -21,12 +21,13 @@ class Books extends Component {
       .then(response => console.log("response", response))
       .catch(error => console.log("error", error));
     this.state = {
-      bookText: book.text
+      bookText: book.text,
+      id: book.id
     };
   }
 
   render() {
-    return <Reader book={this.state.bookText} />;
+    return <Reader key={this.state.id} book={this.state.bookText} />;
   }
 }
 
