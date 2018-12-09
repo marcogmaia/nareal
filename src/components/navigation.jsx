@@ -8,7 +8,7 @@ import "./navigation.css";
 
 class Navigation extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       page: ["home", "book"]
     };

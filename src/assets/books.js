@@ -1,4 +1,5 @@
 import { bran } from "./chapters/bran";
+import { coisa1 } from "./chapters/coisa1";
 
 export const books = [
   {
@@ -7,7 +8,7 @@ export const books = [
     title: "A coisa ",
     author: "Stephen King",
     description: "teste, isso é um teste, obrigado por testar o teste",
-    text: bran
+    text: coisa1
   },
   {
     id: 1,
