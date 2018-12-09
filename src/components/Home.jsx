@@ -30,8 +30,8 @@ class Home extends Component {
                     alt=""
                   />
                   <div className="card-body text-muted">
-                    <h5 className="card-title">{book.title}</h5>
-                    <p className="card-text">{book.description}</p>
+                    <h5 className="card-title text-center">{book.title}</h5>
+                    <p className="card-text text-center">{book.author}</p>
                   </div>
                 </Link>
               </div>
