@@ -31,7 +31,7 @@ class Home extends Component {
                 {/* <button onClick={() => this.handleClickThumbnail(img.id)}> */}
                 <Link
                   onClick={() => this.handleClickThumbnail(img.id)}
-                  to={`books/${img.id}`}
+                  to={`book/${img.id}`}
                 >
                   <img
                     height="350px"
