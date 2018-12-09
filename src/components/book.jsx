@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { books } from "../assets/books";
-import Reader from "./reader";
+import Reader from "./Reader";
 import SpotifyWebApi from "spotify-web-api-js";
 
 class Books extends Component {

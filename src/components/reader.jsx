@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./reader.css";
+import "./Reader.css";
 
 class Reader extends Component {
   constructor(props) {
