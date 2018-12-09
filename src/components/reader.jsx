@@ -65,8 +65,8 @@ function Page(props) {
       {props.pageNum + 1}
       <p class="book-title">{props.book}</p>
       {title}
-      {text.map(a => (
-        <p>{a}</p>
+      {text.map(text => (
+        <p>{text}</p>
       ))}
     </div>
   );
