@@ -3,6 +3,8 @@ import { books } from "../assets/books";
 import Reader from "./reader";
 import SpotifyWebApi from "spotify-web-api-js";
 
+import "./book.css";
+
 class Books extends Component {
   constructor(props) {
     super();
@@ -27,7 +29,22 @@ class Books extends Component {
   }
 
   render() {
-    return <Reader key={this.state.id} book={this.state.jsontxt} />;
+    return (
+      <div>
+        <Reader key={this.state.id} book={this.state.jsontxt} />
+        <div className="btn-reader container">
+          <button id="b1" className="btn btn-danger b1">
+            <i class="fas fa-thumbs-down fa-lg" />
+          </button>
+          <button id="b2" className="btn btn-danger b2">
+            <i className="fas fa-play fa-lg" />
+          </button>
+          <button id="b3" className="btn btn-danger b3">
+            <i class="fas fa-thumbs-up fa-lg" />
+          </button>
+        </div>
+      </div>
+    );
   }
 }
 //wtf

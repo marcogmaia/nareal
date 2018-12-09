@@ -12,6 +12,8 @@ class Home extends Component {
     books: books
   };
 
+  handleBookClick() {}
+
   render() {
     return (
       <div className="">
@@ -19,7 +21,7 @@ class Home extends Component {
           <div className="card-deck">
             {this.state.books.map(book => (
               <div key={book.id} className="card">
-                <Link to={`book/${book.id}`}>
+                <Link onClick="" to={`book/${book.id}`}>
                   <img
                     className="card-img-top"
                     // height="350px"

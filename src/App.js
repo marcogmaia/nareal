@@ -7,7 +7,15 @@ import Error from "./components/error";
 import Navigation from "./components/navigation";
 // const NewHome = Home();
 
+const readerContext = React.createContext("isReader");
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isReader: false
+    };
+  }
   render() {
     return (
       <BrowserRouter>

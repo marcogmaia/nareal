@@ -17,6 +17,7 @@ body {
   display: inline-block;
   border-radius: 23px;
   height: 95%;
+  padding-bottom: 30px;
   /* margin-left: auto; */
   /* margin-right: auto; */
 }

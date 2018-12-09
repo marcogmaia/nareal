@@ -7,15 +7,15 @@ import "./navigation.css";
 // const someComponenet = withRouter(props => )
 
 class Navigation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      page: ["home", "book"]
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     page: ["home", "book"]
+  //   };
+  // }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <nav className="navbar navbar-light navcolor">
         <NavLink className="navbar-brand" to="/">
