@@ -3,15 +3,11 @@ img.logo {
 }
 
 .logo {
-  background: #c94060;
+  background: #e7a8b7;
 }
 
 .card {
   -webkit-box-shadow: 10px 10px 28px -5px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 10px 10px 28px -5px rgba(0, 0, 0, 0.4);
   box-shadow: 10px 10px 28px -5px rgba(0, 0, 0, 0.4);
-}
-
-body {
-  background: #c94060;
 }

@@ -6,7 +6,7 @@ class Navigation extends Component {
     return (
       <div className="logo">
         <NavLink to="/">
-          <img className="logo" src={require(`../images/logo.jpg`)} alt="" />
+          <img className="logo" src={require(`../images/logo.png`)} alt="" />
         </NavLink>
         {/* <NavLink to="/book">Book</NavLink> */}
       </div>

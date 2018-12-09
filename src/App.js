@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Book from "./components/book";
 import Error from "./components/error";
-import Navigation from "./components/navigation";
+import Navigation from "./components/Navigation";
 // const NewHome = Home();
 
 class App extends Component {
