@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Home from "./components/home";
-import Book from "./components/book";
-import Error from "./components/error";
-import Navigation from "./components/navigation";
+import Home from "./home";
+import Book from "./book";
+import Error from "./error";
+import Navigation from "./navigation";
 // const NewHome = Home();
 
 class App extends Component {

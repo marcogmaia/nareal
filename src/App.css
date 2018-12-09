@@ -30,3 +30,15 @@
     transform: rotate(360deg);
   }
 }
+
+.example-card {
+  margin: 10px 0px;
+}
+
+.example-header {
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #e1e8ed;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
