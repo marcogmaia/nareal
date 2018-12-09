@@ -3,7 +3,7 @@ import { bran } from "./chapters/bran";
 export const books = [
   {
     id: 0,
-    img: "/images/aCoisa.jpg",
+    img: "/images/it.jpg",
     title: "A coisa ",
     author: "Stephen King",
     description: "teste, isso é um teste, obrigado por testar o teste",
