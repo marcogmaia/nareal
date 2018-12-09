@@ -15,11 +15,11 @@ class Home extends Component {
   };
 
   // as imagens estao funcionando como botoes
-  handleClickThumbnail = id => {
-    // console.log("mas que coisa doido");
-    // return id;
-    console.log(id);
-  };
+  // handleClickThumbnail = id => {
+  //   // console.log("mas que coisa doido");
+  //   // return id;
+  //   console.log(id);
+  // };
 
   render() {
     return (
@@ -30,7 +30,7 @@ class Home extends Component {
               <div key={img.id} className="card">
                 {/* <button onClick={() => this.handleClickThumbnail(img.id)}> */}
                 <Link
-                  onClick={() => this.handleClickThumbnail(img.id)}
+                  // onClick={() => this.handleClickThumbnail(img.id)}
                   to={`book/${img.id}`}
                 >
                   <img
