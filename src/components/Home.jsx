@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import 
+import { BrowserRouter, Route, NavLink } from "react-router-dom";
+
+import Book from "./book";
 
 class Home extends Component {
   // imgfolder = "../epubs/covers/";
@@ -13,8 +15,19 @@ class Home extends Component {
   };
 
   // as imagens estao funcionando como botoes
-  handleClickThumbnail = () => {
-    console.log("mas que coisa doido");
+  handleClickThumbnail = id => {
+    // console.log("mas que coisa doido");
+    // return id;
+    console.log(id);
+
+    return (
+      // <BrowserRouter>
+      <div>
+        <NavLink to="/book">Book</NavLink>
+      </div>
+      // <Route exact path="book" component={Book} />
+      // </BrowserRouter>
+    );
   };
 
   render() {
@@ -24,22 +37,23 @@ class Home extends Component {
           <div className="row">
             {this.state.images.map(img => (
               <div key={img.id} className="card">
-                <button onClick={this.handleClickThumbnail}>
+                {/* <button onClick={() => this.handleClickThumbnail(img.id)}> */}
+                <NavLink to={"/book"}>
                   <img
                     height="350px"
                     width="250px"
                     src={require(`../epubs/covers/${img.value}.jpg`)}
                     alt=""
                   />
-                </button>
+                </NavLink>
+                {/* </button> */}
               </div>
             ))}
           </div>
         </div>
-        <div className="container meuteste">
-          <h1 className="meuteste">texto teste</h1>
+        <div className="container">
+          <h1>texto teste</h1>
         </div>
-        ;
       </div>
     );
   }

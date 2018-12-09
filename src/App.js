@@ -1,20 +1,26 @@
 import React, { Component } from "react";
-import { Switch, BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Home from "./components/Home";
+import Home from "./components/home";
 import Book from "./components/book";
-
+import Error from "./components/error";
+import Navigation from "./components/navigation";
 // const NewHome = Home();
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/book" component={Book} />
-        </Switch>
-      </BrowserRouter> //wtf !???????
+        <div>
+          {/* <Route component={Navigation} /> */}
+          <Navigation />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/book" component={Book} />
+            <Route component={Error} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
