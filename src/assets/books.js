@@ -25,4 +25,4 @@ export const books = [
     description: "teste 3",
     text: bran
   }
-]
+];
