@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { books } from "../assets/books";
-import Reader from "./Reader";
+import Reader from "./reader";
 import SpotifyWebApi from "spotify-web-api-js";
 
 class Books extends Component {
@@ -30,5 +30,5 @@ class Books extends Component {
     return <Reader key={this.state.id} book={this.state.bookText} />;
   }
 }
-
+//wtf
 export default Books;

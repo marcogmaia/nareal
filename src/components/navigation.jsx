@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import "./Navigation.css";
+// import { withRouter } from "react-router-dom";
+
+import "./navigation.css";
+
+// const someComponenet = withRouter(props => )
 
 class Navigation extends Component {
-  state = {
-    page: ["home", "book"]
-  };
+  constructor(props) {
+    super();
+    this.state = {
+      page: ["home", "book"]
+    };
+  }
 
   render() {
-    this.renderButtons();
+    console.log(this.props);
     return (
       <nav className="navbar navbar-light navcolor">
         <NavLink className="navbar-brand" to="/">
@@ -16,10 +23,6 @@ class Navigation extends Component {
         </NavLink>
       </nav> // ==========================
     );
-  }
-
-  renderButtons() {
-    console.log("oie wtf");
   }
 }
 // <div className="logo">
