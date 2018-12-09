@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+// css files
 
 // import Book from "./book";
 
@@ -7,46 +8,51 @@ class Home extends Component {
   // imgfolder = "../epubs/covers/";
   state = {
     images: [
-      { id: 1, value: "gatsby" },
-      { id: 2, value: "got" },
-      { id: 3, value: "harryPotter" },
-      { id: 4, value: "stephenKing" }
+      {
+        id: 0,
+        addr: "aCoisa.jpg",
+        titulo: "A coisa ",
+        autor: "Stephen King",
+        texto: "teste, isso é um teste, obrigado por testar o teste"
+      },
+      {
+        id: 1,
+        addr: "harryPotter.jpg",
+        titulo: "Harry Potter - A ordem da fênix",
+        autor: "J. K. Rowling",
+        texto: "teste, isso é um teste, obrigado por testar o teste"
+      },
+      {
+        id: 2,
+        addr: "paraTodos.jpg",
+        titulo: "Para todos os garotos que já amei",
+        autor: "Jenny Han",
+        texto: "teste, isso é um teste, obrigado por testar o teste"
+      }
     ]
   };
-
-  // as imagens estao funcionando como botoes
-  // handleClickThumbnail = id => {
-  //   // console.log("mas que coisa doido");
-  //   // return id;
-  //   console.log(id);
-  // };
 
   render() {
     return (
       <div>
-        <div className="album text-muted">
-          <div className="row">
-            {this.state.images.map(img => (
-              <div key={img.id} className="card">
-                {/* <button onClick={() => this.handleClickThumbnail(img.id)}> */}
-                <Link
-                  // onClick={() => this.handleClickThumbnail(img.id)}
-                  to={`book/${img.id}`}
-                >
-                  <img
-                    height="350px"
-                    width="250px"
-                    src={require(`../epubs/covers/${img.value}.jpg`)}
-                    alt=""
-                  />
-                </Link>
-                {/* </button> */}
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="container">
-          <h1>texto teste</h1>
+        <div className="card-deck">
+          {this.state.images.map(img => (
+            <div key={img.id} className="card">
+              <Link to={`book/${img.id}`}>
+                <img
+                  className="card-img-top"
+                  // height="350px"
+                  // width="250px"
+                  src={require(`../images/${img.addr}`)}
+                  alt=""
+                />
+                <div className="card-body text-muted">
+                  <h5 className="card-title">{img.titulo}</h5>
+                  <p className="card-text">{img.texto}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     );
