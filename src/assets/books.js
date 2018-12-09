@@ -1,5 +1,7 @@
 import { bran } from "./chapters/bran";
-import { coisa1 } from "./chapters/coisa1";
+import { coisa } from "./chapters/coisa";
+import { harry } from "./chapters/harry";
+import { garotos } from "./chapters/garotos";
 
 export const books = [
   {
@@ -8,7 +10,7 @@ export const books = [
     title: "A coisa ",
     author: "Stephen King",
     description: "teste, isso é um teste, obrigado por testar o teste",
-    text: coisa1
+    text: coisa
   },
   {
     id: 1,
@@ -16,7 +18,7 @@ export const books = [
     title: "Harry Potter - A ordem da fênix",
     author: "J. K. Rowling",
     description: "teste 2",
-    text: bran
+    text: harry
   },
   {
     id: 2,
@@ -24,6 +26,6 @@ export const books = [
     title: "Para todos os garotos que já amei",
     author: "Jenny Han",
     description: "teste 3",
-    text: bran
+    text: garotos
   }
 ];

@@ -1,4 +1,4 @@
-export const coisa1 = {
+export const coisa = {
   bookTitle: "A Coisa",
   chapterTitle: "Depois da enchente (1957)",
   pages: [
