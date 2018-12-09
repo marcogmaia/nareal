@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import Book from "./book";
+// import Book from "./book";
 
 class Home extends Component {
   // imgfolder = "../epubs/covers/";
@@ -19,15 +19,6 @@ class Home extends Component {
     // console.log("mas que coisa doido");
     // return id;
     console.log(id);
-
-    return (
-      // <BrowserRouter>
-      <div>
-        <NavLink to="/book">Book</NavLink>
-      </div>
-      // <Route exact path="book" component={Book} />
-      // </BrowserRouter>
-    );
   };
 
   render() {
@@ -38,14 +29,17 @@ class Home extends Component {
             {this.state.images.map(img => (
               <div key={img.id} className="card">
                 {/* <button onClick={() => this.handleClickThumbnail(img.id)}> */}
-                <NavLink to={"/book"}>
+                <Link
+                  onClick={() => this.handleClickThumbnail(img.id)}
+                  to={`books/${img.id}`}
+                >
                   <img
                     height="350px"
                     width="250px"
                     src={require(`../epubs/covers/${img.value}.jpg`)}
                     alt=""
                   />
-                </NavLink>
+                </Link>
                 {/* </button> */}
               </div>
             ))}
