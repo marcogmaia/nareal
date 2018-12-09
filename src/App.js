@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Home from "./components/home";
+import Home from "./components/Home";
 import Book from "./components/book";
 import Error from "./components/error";
 import Navigation from "./components/navigation";
@@ -16,7 +16,7 @@ class App extends Component {
           <Navigation />
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/book/:testval" component={Book} />
+            <Route path="/book/:id" component={Book} />
             <Route component={Error} />
           </Switch>
         </div>

@@ -1,37 +1,28 @@
 import React, { Component } from "react";
+import { books } from "../assets/books";
+import Reader  from "./reader";
+import SpotifyWebApi from "spotify-web-api-js";
 
 class Books extends Component {
-  state = {
-    books: [
-      {
-        id: 0,
-        text:
-          "random text 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti asperiores maxime expedita, nesciunt voluptas porro? Sit consectetur totam quibusdam amet, corrupti tempora, veniam commodi quas nobis, odio iste minus soluta."
-      },
-      { id: 1, text: "random text 2" },
-      { id: 2, text: "random text 3" },
-      { id: 3, text: "random text 4" }
-    ]
-  };
-
-  // console.log(this.props);
-  randomtext(index) {
-    return (
-      <div className="card text-center">
-        <p>{this.state.books[index].text}</p>
-      </div>
-    );
+  constructor(props) {
+    super();
+    const index = props.match.params.id;
+    const book = books[index];
+    const rawText = book.text.pages.join("");
+    const spotifyApi = new SpotifyWebApi();
+    const accessToken = "BQBXHlIEP-y9DAMtb-AOfk-ws92u1rk3pL2vZvgkWP7AzbFTzmygiW-nFIKfYBEI3UHpCOnYjUaOwleacuyry7vCLphyv7qzSBriE9jcHD1SR1m_fANPONDYtBtTSWF3H-JWCct9dcTzPqEYhZ8";
+    spotifyApi.setAccessToken(accessToken);
+    spotifyApi.play({context_uri: "https://open.spotify.com/playlist/6kLyKCROdQuZ8aFEPxjvYe"})
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
+    this.state  = {
+      bookText: book.text
+    };
   }
 
   render() {
-    const index = this.props.match.params.testval;
     return (
-      <div className="container">
-        <h1>
-          <p>Book</p>
-        </h1>
-        <h4>{this.randomtext(index)}</h4>
-      </div>
+      <Reader book={this.state.bookText} />
     );
   }
 }
