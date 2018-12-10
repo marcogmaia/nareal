@@ -74,7 +74,7 @@ class Books extends Component {
 
     spotifyApi.setAccessToken(accessToken);
 
-    if (!this.state.isPaused) {
+    if (this.state.isPaused) {
       spotifyApi.play()
       .then(response => console.log("oie"))
       .catch(error => console.log(error));
