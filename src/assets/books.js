@@ -1,4 +1,3 @@
-import { bran } from "./chapters/bran";
 import { coisa } from "./chapters/coisa";
 import { harry } from "./chapters/harry";
 import { garotos } from "./chapters/garotos";
