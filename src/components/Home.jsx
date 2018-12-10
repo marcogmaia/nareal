@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { books } from "../assets/books";
 // css files
-import "./home.css";
+import "./Home.css";
 
 // import Book from "./book";
 
